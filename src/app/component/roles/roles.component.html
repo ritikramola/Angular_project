@@ -1,5 +1,69 @@
-<!-- <p>roles works!</p>
+ <!-- <p>roles works!</p>
 //this is called interpolation
+//we use intrerpolation when we have print any data inside an element
 <p>{{firstname}}</p>  //here we are using the firstname variable from the component directly in the template
 <p>{{version}}</p>  //here we are using the version variable from the component directly in the template
-<p>{{currentDate}}</p> -->
+<p>{{currentDate}}</p>  -->
+
+
+ <!--To check if bootstrap is working or not//
+ //this is called interpolation 
+//we use intrerpolation when we have print any data inside an element -->
+<p>Roles works!</p>
+<div class="row">
+    <div class="col-3">
+        <p>{{firstname}}</p>
+    </div>
+     <div class="col-3">
+        <p>{{version}}</p>
+    </div>
+     <div class="col-3">
+        <p>{{currentDate}}</p>
+    </div>
+     <div class="col-3">
+        <p>{{selectState}}</p>
+    </div>
+</div> 
+<!--
+    Property binding is a technique in Angular that allows you to bind data from your component class to the properties of HTML elements in your template.
+    It is done using square brackets [] around the property name.
+    This allows you to dynamically set the value of an element's property based on the component's state.
+// Property binding means providing a value to an element property-->
+<!--<p>Roles works!</p>
+<div class="row">
+    <div class="col-3">
+        <input type = "text" [value]="firstname" class="form-control"/> //with the help of [] we bind the value of the input field to the firstname variable from the component
+    </div>
+     <div class="col-3">
+        <input type = "text" [value]="version" class="form-control"/> //with the help of [] we bind the value of the input field to the version variable from the component
+    </div>
+     <div class="col-3">
+        <input type = "text" [value]="currentDate" class="form-control"/> // the help of [] we bind the value of the input field to the currentDate variable from the component
+    </div>
+     <div class="col-3">
+       <input [type]="inputType"/>  // is dynamic binding type.
+    </div>
+</div>
+-->
+
+<!-- data binding using ng model
+//This is a two-way data binding technique in Angular that allows you to bind data from your component class to the properties of HTML elements in your template and vice versa.-->
+<div class="row">
+    <div class="col-3">
+        <input type = "text" [value]="firstname" class="form-control"/> 
+    </div>
+    <div class="col-3">
+        <input type = "text" [(ngModel)]="firstname"/> <!--/with the help of [(ngModel)] we bind the value of the input field to the firstname variable from the component-->
+    </div>
+    <div class="col-3">
+        <input [type]="inputType"/> <!-- is dynamic binding type. -->
+    </div>
+    <div class="col-3">
+    <select [(ngModel)]="selectState">
+        <option value="MH">MH</option>
+        <option value="MP">MP</option>
+        <option value="UK">UP</option>
+        <option value="UP">UK</option>
+    </select>
+    </div>
+</div>

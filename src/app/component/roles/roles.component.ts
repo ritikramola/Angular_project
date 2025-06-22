@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 //component decorator //means what this class is going to do
 //selector is the name of the component
 @Component({
   selector: 'app-roles',
-  imports: [],  // any imports needed for this component
+  imports: [FormsModule],  // any imports needed for this component
   standalone: true, // this component is standalone
   // templateUrl is the path to the HTML file for this component
   templateUrl: './roles.component.html',
@@ -14,12 +15,14 @@ import { Component } from '@angular/core';
 export class RolesComponent {
   // // variable to hold the roles
 
-  // firstname: string = 'Tutorial';
-  // angularversion: string = 'Angular 17';
-  // version: number = 17;
-  // isActive: boolean = true;
-  // currentDate: Date = new Date();
+  firstname: string = 'Tutorial';
+  angularversion: string = 'Angular 17';
+  version: number = 17;
+  isActive: boolean = true;
+  currentDate: Date = new Date();
 
-  // //we can only use the variable in the HTML file i.e // roles.component.html
+  inputType: string = "button"; // this is a variable that holds the type of the input element
+  selectState : string = ''; // this is a variable that holds the selected state
+  //we can only use the variable in the HTML file i.e // roles.component.html
 }
  

@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-12 text-center">
+        <div class="btn-group">
+
+<!-- This section contains buttons to switch between Roles and Designation components -->
+ <!--To add dynamic class we use ngclass-->
+
+            <button type="button" (click)="changeTab('Roles')" class="btn" 
+            [ngClass]="currentcomponent == 'Roles' ? 'btn-success' : 'btn-primary' " >Roles</button> 
+            <button type="button" (click)="changeTab('Designation')" class="btn" 
+            [ngClass]="currentcomponent == 'Designation' ? 'btn-success' : 'btn-primary'">Component</button>.
+        </div>  
+    </div>  
+</div>
+<!-- This section contains the buttons to switch between Roles and Designation components
+ ngif is used to conditionally display the components based on the current selection-->
+<div class="row">
+    <div class="col-12" *ngIf="currentcomponent == 'Roles'">  <!--ngif directive to conditionally display Roles component-->
+        <app-roles> </app-roles>
+    </div>
+    <div class="col-12" *ngIf="currentcomponent == 'Designation'"> <!--ngif directive to conditionally display Designation component-->
+        <app-designation>   </app-designation>
+    </div>

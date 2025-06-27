@@ -24,5 +24,13 @@ export class RolesComponent {
   inputType: string = "button"; // this is a variable that holds the type of the input element
   selectState : string = ''; // this is a variable that holds the selected state
   //we can only use the variable in the HTML file i.e // roles.component.html
+
+  showWelcomeAlert() {  // this is a function that shows an alert when called
+    alert('Welcome to the Angular 17 Tutorial');
+  }
+
+  showMessage(message:String) { // this is a function that shows an alert when called
+    alert(message);
+  }
 }
  

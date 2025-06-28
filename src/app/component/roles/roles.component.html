@@ -1,4 +1,4 @@
- <!-- <p>roles works!</p>
+ <!--- <p>roles works!</p>
 //this is called interpolation
 //we use intrerpolation when we have print any data inside an element
 <p>{{firstname}}</p>  //here we are using the firstname variable from the component directly in the template
@@ -8,7 +8,7 @@
 
  <!--To check if bootstrap is working or not//
  //this is called interpolation 
-//we use intrerpolation when we have print any data inside an element -->
+//we use intrerpolation when we have print any data inside an element 
 <p>Roles works!</p>
 <div class="row">
     <div class="col-3">
@@ -23,7 +23,7 @@
      <div class="col-3">
         <p>{{selectState}}</p>
     </div>
-</div> 
+</div> -->
 <!--
     Property binding is a technique in Angular that allows you to bind data from your component class to the properties of HTML elements in your template.
     It is done using square brackets [] around the property name.
@@ -47,16 +47,17 @@
 -->
 
 <!-- data binding using ng model
-//This is a two-way data binding technique in Angular that allows you to bind data from your component class to the properties of HTML elements in your template and vice versa.-->
+//This is a two-way data binding technique in Angular that allows you to bind data from your component class to the properties of HTML elements in your template and vice versa
+
 <div class="row">
     <div class="col-3">
         <input type = "text" [value]="firstname" class="form-control"/> 
     </div>
     <div class="col-3">
-        <input type = "text" [(ngModel)]="firstname"/> <!--/with the help of [(ngModel)] we bind the value of the input field to the firstname variable from the component-->
+        <input type = "text" [(ngModel)]="firstname"/> //with the help of [(ngModel)] we bind the value of the input field to the firstname variable from the component
     </div>
     <div class="col-3">
-        <input [type]="inputType"/> <!-- is dynamic binding type. -->
+        <input [type]="inputType"/> // is dynamic binding type. 
     </div>
     <div class="col-3">
     <select [(ngModel)]="selectState">
@@ -69,7 +70,10 @@
 </div>
 <div class="row">
     <div class="col-3">
-        <button class="btn btn-primary" (click)="showWelcomeAlert()">Show Alert</button> <!--this is called event binding-->
+        <button class="btn btn-primary" (click)="showWelcomeAlert()">Show Alert</button> //this is called event binding
     </div>
     <div class="col-3">
-        <button class="btn btn-primary" (click)="showMessage('Hello Ritik')">Show Alert with Param</button> <!--this is called event binding with parameter-->
+        <button class="btn btn-primary" (click)="showMessage('Hello Ritik')">Show Alert with Param</button> //this is called event binding with parameter-->
+
+
+

@@ -2,14 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';  // Importing necessary Angular core module
 // Importing OnInit lifecycle hook to perform initialization logic
 import { FormsModule } from '@angular/forms';
-import { IRole } from '../model/interface/role';
+import { APIResponse, IRole } from '../model/interface/role';
+import { CommonModule } from '@angular/common';
 
 
 //component decorator //means what this class is going to do
 //selector is the name of the component
 @Component({
   selector: 'app-roles',
-  imports: [FormsModule],  // any imports needed for this component
+  imports: [FormsModule,CommonModule],  // any imports needed for this component
   standalone: true,         // this component is standalone, meaning it can be used independently without being part of a module
   // templateUrl is the path to the HTML file for this component
   templateUrl: './roles.component.html',
@@ -34,7 +35,7 @@ ngOnInit(): void {
 }
 
 getAllRoles() {
-  this.http.get('https://freeapi.miniprojectideas.com/api/ClientStrive/GetAllRoles').subscribe((res:any)=>{
+  this.http.get<APIResponse>('https://freeapi.miniprojectideas.com/api/EmployeeApp/GetAllRoles').subscribe((res:APIResponse)=>{
     this.rolelist = res.data; // Assigning the response data to the rolelist variable
   })
 }

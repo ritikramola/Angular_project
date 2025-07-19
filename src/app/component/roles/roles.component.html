@@ -16,6 +16,14 @@
 </div>-->
 
 <div class="row">
+    @if(isLoader == true) {
+        <div class="col-12 text-center">
+            <div class="spinner-border"></div>
+        </div>
+    } @else {
+        <div class="col-12">
+            <h2>Roles List</h2>
+        </div>
     <div class="col-12">
         <table class="table table-bordered">
             <thead>
@@ -32,4 +40,5 @@
             </tbody>
         </table>
     </div>
+    }
 </div>

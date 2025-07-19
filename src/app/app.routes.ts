@@ -3,8 +3,8 @@
 // we can use the new inject function to inject services in the component
 import { Routes } from '@angular/router';
 import { MasterComponent } from './component/master/master.component';
-import { EmployeeComponent } from './employee/employee.component';
-import { ClientComponent } from './client/client.component';
+import { EmployeeComponent } from './component/employee/employee.component';
+import { ClientComponent } from './component/client/client.component';
 
 export const routes: Routes = [
     {

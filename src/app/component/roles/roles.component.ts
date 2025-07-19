@@ -25,6 +25,7 @@ export class RolesComponent implements OnInit {
 
   rolelist: IRole[] = [] // variable to hold the roles
   http = inject(HttpClient); // Injecting HttpClient to make HTTP requests using the new inject function //this is the new way
+  isLoader: boolean = true; // Variable to control the loading state
 
 
 ngOnInit(): void {
@@ -37,6 +38,7 @@ ngOnInit(): void {
 getAllRoles() {
   this.http.get<APIResponse>('https://freeapi.miniprojectideas.com/api/EmployeeApp/GetAllRoles').subscribe((res:APIResponse)=>{
     this.rolelist = res.data; // Assigning the response data to the rolelist variable
+    this.isLoader = false; // Setting the loader to false after data is fetched
   })
 }
 

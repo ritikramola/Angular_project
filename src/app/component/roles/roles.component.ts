@@ -2,8 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';  // Importing necessary Angular core module
 // Importing OnInit lifecycle hook to perform initialization logic
 import { FormsModule } from '@angular/forms';
-import { APIResponse, IRole } from '../model/interface/role';
 import { CommonModule } from '@angular/common';
+import { APIResponse, IRole } from '../../model/interface/role';
 
 
 //component decorator //means what this class is going to do

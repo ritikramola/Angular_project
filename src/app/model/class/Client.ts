@@ -8,7 +8,7 @@ export class Client {
     state: string;
     employeeStrength: number;
     gstNumber: string;
-    contactNumber: number;
+    contactNumber: string;
     registrationNo: string;
 
     constructor() {
@@ -21,7 +21,7 @@ export class Client {
         this.state = "";
         this.employeeStrength = 0;
         this.gstNumber = "";
-        this.contactNumber = 0;
+        this.contactNumber = "";
         this.registrationNo = "";
     }
 }

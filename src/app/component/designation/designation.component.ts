@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { MasterService } from '../../services/master.service';
-import { APIResponse, IDesignition } from '../model/interface/role';
+import { APIResponse, IDesignition } from '../../model/interface/role';
 
 @Component({
   selector: 'app-designation',
